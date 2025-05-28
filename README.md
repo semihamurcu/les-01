@@ -16,11 +16,11 @@ sudo apt update
 sudo apt install ansible -y
 
 
-# Maak een nieuwe projectdirectory aan:
+### 1. Maak een nieuwe projectdirectory aan:
 mkdir esxi-ansible
 cd esxi-ansible
 
-# 🗂️ Inventory-bestand aanmaken
+### 2. 🗂️ Inventory-bestand aanmaken
 touch inventory.ini
 
 Voeg de volgende inhoud toe:
@@ -28,7 +28,7 @@ Voeg de volgende inhoud toe:
 [esxi]
 192.168.1.3 ansible_user=root ansible_ssh_pass=Welkom01! ansible_connection=ssh
 
-# Ansible configuratiebestand
+### 3. Ansible configuratiebestand
 touch ansible.cfg
 
 Inhoud:
@@ -37,7 +37,7 @@ Inhoud:
 inventory = ./inventory.ini
 host_key_checking = False
 
-# Verbinding testen
+### 4. Verbinding testen
 ansible esxi -m ping
 
 ## Eindresultaat
